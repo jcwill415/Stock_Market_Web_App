@@ -51,7 +51,7 @@
 {% endif %}
 
 {% for item in ticker %}
-	<h10>{{ item }} || <a href="{% url 'delete' item.id %}">Delete Stock</a> </h10></br>
+	<a href="{% url 'delete' item.id %}" class="btn btn-outline-danger btn-small">Delete {{ item }}</a> </br></br> 
 {% endfor %}
 
 <br/></br>
