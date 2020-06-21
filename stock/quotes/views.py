@@ -12,7 +12,7 @@ def home(request):
 		ticker = request.POST['ticker']
 		# pk_61291fb58322416692fb8d084051a126
 		# pass in url that calls the api
-		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=sk_421501c1c18c4b2f912137fced92b414")
+		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "</your_api_key>")
 
 		try:
 			api = json.loads(api_request.content)
