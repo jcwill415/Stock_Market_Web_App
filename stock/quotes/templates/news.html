@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<h1>Market News</h1><br/>
+	
+<div class="container">
+	<div class="row">
+		{% for x in api.data %}	
+			<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+			  <a href="{{ x.news_url }}"><img href="{{ x.news_url }}" src="{{ x.image_url }}" class="card-img-top" alt="{{ x.source_name }}" class="list-group-item"></a>
+			  <div class="card-body">
+			    <h5 class="card-title">{{ x.title }}</h5>
+			    <p class="card-text">{{ x.text }}</p>
+			  </div>
+			  <ul class="list-group list-group-flush">
+			  	<em><li class="list-group-item text-white bg-dark mb-3">{{ x.source_name }}</em>, {{ x.date }}, <strong>{{ x.sentiment}}</strong></li>
+			  </ul>
+			  <div class="card-body">
+			  	<a href="{{ x.news_url }}" class="btn btn-outline-primary">Read More...</a>
+			  </div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+	<!--<form action="{% url 'news' %}" class="form-inline my-2 my-lg-0" method="POST">
+	      	{% csrf_token %}    
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search news by ticker" aria-label="Search by ticker" name="ticker">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SEARCH</button>
+	    </form>-->
+	<br/>
+	
+	<ul>
+		{% for x in api.data %}
+			<li>{{ x.title }}</li>
+		{% endfor %}
+	</ul>
+
+	{{ api.data }}	
+
+{% endblock %}
