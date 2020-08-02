@@ -2,7 +2,7 @@
 Web App for Stock Quotes &amp; Live News Stream; Building a Portfolio Using Python &amp; Django
 
 ## Purpose
-* This is my first big project to develop a full stack app on my won.
+* This is my first big project to develop a full stack app on my own.
 * It is a web application for stock market data. Users can get real-time stock data and market news via Alpha Vantage, IEX Cloud, and Stock News APIs.
 * Creation of personal stock portfolios and a live streaming news feed are the first features.
 * Adding charts visualization and implementing machine learning to analyze stocks will be the second goal, when I expand this app in the near future.
