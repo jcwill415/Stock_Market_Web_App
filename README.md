@@ -1,5 +1,5 @@
 # STOCK MARKET WEB APP
-Web App for Stock Quotes &amp; Building a Portfolio Using Python &amp; Django
+Web App for Stock Quotes &amp; Live News Stream; Building a Portfolio Using Python &amp; Django
 
 ## Purpose
 * This is my first big project to develop a full stack app on my won.
