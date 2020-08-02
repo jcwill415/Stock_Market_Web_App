@@ -50,7 +50,7 @@ def add_stock(request):
 		output = []
 		# modify to pull multiple stock tickers at the same time
 		for ticker_item in ticker:
-			api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + str(ticker_item) + "/quote?token=sk_421501c1c18c4b2f912137fced92b414")
+			api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + str(ticker_item) + "/quote?token=</your_api_key>")
 			try:
 				api = json.loads(api_request.content)
 				output.append(api)
