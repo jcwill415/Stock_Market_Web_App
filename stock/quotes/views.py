@@ -12,7 +12,7 @@ def home(request):
 		ticker = request.POST['ticker']
 		# pk_61291fb58322416692fb8d084051a126
 		# pass in url that calls the api
-		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=sk_421501c1c18c4b2f912137fced92b414")
+		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=</your_api_key>")
 		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "</your_api_key>")
 
 		try:
@@ -51,7 +51,7 @@ def add_stock(request):
 		output = []
 		# modify to pull multiple stock tickers at the same time
 		for ticker_item in ticker:
-			api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + str(ticker_item) + "/quote?token=sk_421501c1c18c4b2f912137fced92b414")
+			api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + str(ticker_item) + "/quote?token=</your_api_key>")
 			try:
 				api = json.loads(api_request.content)
 				output.append(api)
@@ -71,13 +71,13 @@ def news(request):
 	import json
 	
 	# News API
-	#api_request = requests.get('http://newsapi.org/v2/everything?q=stocks&apiKey=7f080596c5bb4443bad7e4557f38c6f7')
+	#api_request = requests.get('http://newsapi.org/v2/everything?q=stocks&apiKey=</your_api_key>')
 	
 	# BASIC - Stock News API
-	#api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=general&items=50&token=se3rms2q6gvn7xb68yj6b43q0ki9wxqwprloqngg')
+	#api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=general&items=50&token=</your_api_key>')
 	
 	# PREMIUM - Stock News API
-	api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&token=u3cwpz4irzqp9opf8l8wwvwpzaeowplc3uggxyxe')
+	api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&token=</your_api_key>')
 	api = json.loads(api_request.content)
 	return render(request, 'news.html', {'api': api}) 
 	messages.success(request, ("Stock Has Been Deleted"))
