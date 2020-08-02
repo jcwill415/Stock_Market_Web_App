@@ -12,11 +12,8 @@ def home(request):
 		ticker = request.POST['ticker']
 		# pk_61291fb58322416692fb8d084051a126
 		# pass in url that calls the api
-<<<<<<< HEAD
 		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=sk_421501c1c18c4b2f912137fced92b414")
-=======
 		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "</your_api_key>")
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
 
 		try:
 			api = json.loads(api_request.content)
@@ -30,11 +27,8 @@ def home(request):
 	
 		return render(request, 'home.html', {'ticker': "Enter a Ticker Symbol Above..."})
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
 def about(request):
 	return render(request, 'about.html', {})
 
@@ -69,7 +63,6 @@ def add_stock(request):
 def delete(request, stock_id):
 	item = Stock.objects.get(pk=stock_id) # call database by primary key for id #
 	item.delete()
-<<<<<<< HEAD
 	messages.success(request, ("Stock Has Been Deleted From Portfolio!"))
 	return redirect(add_stock)
 	
@@ -87,14 +80,6 @@ def news(request):
 	api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&token=u3cwpz4irzqp9opf8l8wwvwpzaeowplc3uggxyxe')
 	api = json.loads(api_request.content)
 	return render(request, 'news.html', {'api': api}) 
-
-#def home(request):
-#	import requests
-#	import json
-#	api_request = requests.get("https://min-api.cryptocompare.com/data/v2/news/?lang=EN")
-#	api = json.loads(api_request.content)
-#	return render(request, 'home.html', {'api': api})
-=======
 	messages.success(request, ("Stock Has Been Deleted"))
 	return redirect(add_stock)
 
@@ -102,4 +87,3 @@ def news(request):
 
 
 
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844

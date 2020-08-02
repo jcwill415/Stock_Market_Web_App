@@ -5,7 +5,6 @@
 	{{ ticker }}
 {% endif %}
 
-<<<<<<< HEAD
 <br/>
 <h1>Welcome to StockQuotes!</h1>
 	<div>
@@ -14,10 +13,6 @@
 		<a href="#">Charts</h5></a>
 		</br>
 	</div>	
-=======
-<h1>Welcome to StockQuotes</h1>
-<br/>
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
 <br/>
 
 {% if api %}
@@ -26,7 +21,6 @@
 			<strong>Error: </strong>{{ error }}
         </div>
         
-<<<<<<< HEAD
 		There was a problem with the API or your ticker symbol, please try again...
 	
 	{% else %}
@@ -56,32 +50,6 @@
 	  		</div>
 		</div>
 		
-=======
-		There was a problem with the api or your ticker symbol, please try again...
-	
-	{% else %}
-		
-		<h1>{{ api.companyName }}</h1><br/>
-		<h3>({{ api.symbol}})</h3><br/>
-		<b>Price: ${{ api.latestPrice }}<br/></b>
-		Previous Close: ${{ api.previousClose }}<br/>
-		
-		Market Cap: {{ api.marketCap }}<br/>
-		Volume: {{ api.latestVolume }}<br/>
-		PE Ratio: {{ api.peRatio }} </br></br>
-
-		Percent Change: {{ api.changePercent }}</br>	
-		YTD Change: {{ api.ytdChange }}<br/></br>
-
-		52Wk High: {{ api.week52High }}<br/>
-		52Wk Low: {{ api.week52Low }}<br/></br>
-
-		Open: ${{ api.open }}<br/>
-		High: ${{ api.high }}<br/>
-		Low: ${{ api.low }}<br/>
-		Close: ${{ api.close }}<br/>
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
-
 <!-- 	to list all api key: value pairs
 		{% for key, value in api.items %}
 			{{ key }}: {{ value }} </br>

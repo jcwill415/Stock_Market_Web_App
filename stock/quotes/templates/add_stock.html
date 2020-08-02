@@ -2,21 +2,13 @@
 {% block content %}
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
 <h1>Add Stock to Portfolio</h1>
 </br>
 
 <form action="{% url 'add_stock' %}" class="form-inline my-2 my-lg-0" method="POST">
       	{% csrf_token %}    
       <input class="form-control mr-sm-2" type="search" placeholder="Add Stock to Portfolio" aria-label="Search by ticker" name="ticker">
-<<<<<<< HEAD
       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">ADD TICKER</button>
-=======
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ADD TICKER</button>
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
     </form>
 
 </br>
@@ -35,11 +27,8 @@
       <th scope="col">YTD CHG</th>
       <th scope="col">52 WK HIGH</th>
 	    <th scope="col">52 WK LOW</th>
-<<<<<<< HEAD
       <th scope="col">REMOVE STK</th>
 
-=======
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
     </tr>
   </thead>
   <tbody>
@@ -56,13 +45,10 @@
 					<td>{{ list_item.ytdChange }}</td>
 					<td>${{ list_item.week52High }}</td>
 					<td>${{ list_item.week52Low }}</td>
-<<<<<<< HEAD
           <td><a href="{{ list_item.companyName }}" class="btn btn-outline-danger btn-small">Delete {{ item }}</a></td>
 				</tr>
 
-=======
 				</tr>
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
 			{% endfor %}
 		
   </tbody>

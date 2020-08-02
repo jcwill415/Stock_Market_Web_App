@@ -38,11 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quotes',
-<<<<<<< HEAD
     'rest_framework',
     'rest_framework_api_key',
-=======
->>>>>>> bde18336793f75e64da53d69caee8eeaa48a0844
 ]
 
 MIDDLEWARE = [
