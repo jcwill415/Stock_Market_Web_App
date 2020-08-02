@@ -66,7 +66,21 @@ def delete(request, stock_id):
 def news(request):
 	import requests
 	import json
+	
+	# News API
 	#api_request = requests.get('http://newsapi.org/v2/everything?q=stocks&apiKey=7f080596c5bb4443bad7e4557f38c6f7')
-	api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&token=se3rms2q6gvn7xb68yj6b43q0ki9wxqwprloqngg')
+	
+	# BASIC - Stock News API
+	#api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=general&items=50&token=se3rms2q6gvn7xb68yj6b43q0ki9wxqwprloqngg')
+	
+	# PREMIUM - Stock News API
+	api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&token=u3cwpz4irzqp9opf8l8wwvwpzaeowplc3uggxyxe')
 	api = json.loads(api_request.content)
 	return render(request, 'news.html', {'api': api}) 
+
+#def home(request):
+#	import requests
+#	import json
+#	api_request = requests.get("https://min-api.cryptocompare.com/data/v2/news/?lang=EN")
+#	api = json.loads(api_request.content)
+#	return render(request, 'home.html', {'api': api})
