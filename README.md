@@ -32,3 +32,7 @@ For a demo of the code and how the web app works, please see this screen recordi
 * Django
 * Django Rest Framework
 * Back end language: Python (the version used here is Python 3.7.7)
+* Bootstrap
+* HTML/CSS
+* JavaScript
+* SQL
