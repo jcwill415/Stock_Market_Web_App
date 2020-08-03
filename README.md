@@ -10,7 +10,7 @@ Web App for Stock Quotes &amp; Live News Stream; Building a Portfolio Using Pyth
 ## Demo
 For a demo of the code and how the web app works, please see this screen recording: https://www.screencast.com/t/JoT9sT67h.
 
-## How to Run
+## Requirements
 * Get your own Django secret key
 	* Create your own Django app
 	* Copy secret key
