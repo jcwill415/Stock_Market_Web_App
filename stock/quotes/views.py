@@ -10,7 +10,6 @@ def home(request):
 
 	if request.method == 'POST':
 		ticker = request.POST['ticker']
-		# pk_61291fb58322416692fb8d084051a126
 		# pass in url that calls the api
 		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=</your_api_key>")
 		api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + ticker + "</your_api_key>")
